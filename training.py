@@ -1,17 +1,18 @@
 def main():
     amount_due : int = 50
-    input_money = insert_coin()
     
     while amount_due > 0:
-        amount_due = amount_due - input_money
+        amount_due = amount_due - check_coin()
+        print("Amount due:", amount_due)
 
-    print("Amount Due: ", amount_due)
-
-def insert_coin():
+def get_coin():
     return int(input("Insert Coin: "))
 
-def insert_coin_correct():
+def check_coin():
+    if get_coin() == 5:
+        return
     
+
 
 if __name__ == "__main__":
     main()
