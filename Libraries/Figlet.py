@@ -2,7 +2,6 @@ from pyfiglet import Figlet
 import sys
 import random
 
-
 if len(sys.argv) == 1:
     ...
 elif len(sys.argv) == 3:
