@@ -6,17 +6,18 @@ def main():
     for i in range(10):
         first_number = generate_integer(level)
         second_number = generate_integer(level)
-        for i in range(3):
-            try:
+        try:
+            for i in range(3):
                 answer = int(input(f"{first_number} + {second_number} = "))
                 if answer == first_number + second_number:
                     count += 1
                     break
                 else:
                     print("EEE")
-            except ValueError:
-                print("An error occured")
-                                                                                    #  print("Correct answer is: ", (first_number + second_number))
+            else:
+                print("Correct answer is: ", (first_number + second_number))
+        except ValueError:
+            print("An error occured")
     print(f"You gave {count} correct answers")
 
 def get_level():
