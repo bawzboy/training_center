@@ -1,7 +1,7 @@
 from twttr import shorten
 
 def test_upper():
-    assert ...
+    assert shorten("AEIOU") == ""
 
 def test_lower():
-    assert ...
+    assert shorten("aeiou") == ""
