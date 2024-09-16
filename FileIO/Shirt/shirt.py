@@ -17,16 +17,11 @@ elif not (sys.argv[1].lower().endswith(file_formats) and
 elif splitext(sys.argv[1])[1] != splitext(sys.argv[2])[1]:
     sys.exit("Not same file format")
 
-def main():
-    try:
-        picture = Image.open(sys.argv[1])
-        picture = ImageOps.fit(picture, size = shirt_size)
-        picture.paste(shirt, shirt)
-        picture.save(sys.argv[2])
-    
-    except FileNotFoundError:
-        ("File not found")
+try:
+    picture = Image.open(sys.argv[1])
+    picture = ImageOps.fit(picture, size = shirt_size)
+    picture.paste(shirt, shirt)
+    picture.save(sys.argv[2])
 
-
-if __name__ == "__main__":
-    main()
+except FileNotFoundError:
+    ("File not found")
