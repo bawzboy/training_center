@@ -44,6 +44,6 @@ class Jar:
 #     cookie_jar.deposit(5)
 #     print(cookie_jar)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
     
